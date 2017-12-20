@@ -76,8 +76,7 @@ Response :
 ```
 
 ### Question 4:
-
-Create a program that can cause deadlocks and an endpoint to monitor the deadlocks
+REST endpoint that creates two threads that become deadlocked with each other. Use the REST function to monitor the two threads and detect the deadlock.
 
 Request:
 ```
@@ -88,8 +87,6 @@ Response:
 ```
 Number of deadlocked threads: 2
 ```
-
-
 
 ### Question 5:
 
