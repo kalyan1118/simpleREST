@@ -100,7 +100,7 @@ curl -X POST http://localhost:8080/Users -d '{"name": "Kalyan", "email":"Kalyan@
 ```
 Response:
 ```
-## User:  Kalyan Saved Sucessfully
+User:  Kalyan Saved Sucessfully
 ```
 
 Request:
@@ -109,7 +109,8 @@ curl -X POST http://localhost:8080/Users -d '{"name": "Chintalapati", "email":"C
 -H "Content-Type: application/json"
 ```
 Response:
-## User: Chintalapati Saved Sucessfully 
+```
+User: Chintalapati Saved Sucessfully 
 ```
 
 #### List all users(Query-1):
