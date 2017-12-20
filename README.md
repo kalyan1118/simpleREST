@@ -33,15 +33,15 @@ Response:
 ```
 
 ### Question 2:
+REST endpoint that accepts a JSON object containing a paragraph of text and returns a JSON array of objects. The returned objects represent the unique words from the supplied paragraph along with a count of the number of occurrences. The array of objects must be sorted alphabetically.
+
 
 Request:
 ```
-curl -X POST -H "Content-Type: application/json" \
- http://localhost:8080/wordcount \
- -d '{"text":"a hello world world w"}' 
+curl -X POST http://localhost:8080/wordCount -d '{"text":"A world hello w world"}'
+-H "Content-Type: application/json"
 ```
-
-###EResponse:
+Response:
 ```json
 [
   {
@@ -64,26 +64,15 @@ curl -X POST -H "Content-Type: application/json" \
 ```
 
 ### Question 3:
-
-First N Fibonacci numbers
- 
+REST endpoint that accepts a number, N, and returns a JSON array with the first N Fibonacci numbers. 
+Request takes default value of 10.
+Request:
 ```
 curl http://localhost:8080/fibonacci?n=10
 ```
-
 Response : 
 ```json
-[
-  0,
-  1,
-  1,
-  2,
-  3,
-  5,
-  8,
-  13,
-  21
-]
+{"nfibonacci":[1,1,2,3,5,8,13,21,34,55]}
 ```
 
 ### Question 4:
