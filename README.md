@@ -89,57 +89,52 @@ Number of deadlocked threads: 2
 ```
 
 ### Question 5:
+Add three REST endpoints that add, query, and delete rows in a database.
+HyperSQL(hsqldb.org) is Used and database dependency is added.
 
--[x] HSQL In memory DB
--[x] Create, List, Delete endpoints
-  
-
-#### Create User:
- 
+#### Create Entry(Add): 
+Request
 ```
-curl -X POST http://localhost:8080/users -d '{"name": "User1", "email":"kv1@gmail.com"}' -H "Content-Type: application/json"
-## Saved
-curl -X POST http://localhost:8080/users -d '{"name": "User2", "email":"kv2@gmail.com"}' -H "Content-Type: application/json"
-## Saved 
+curl -X POST http://localhost:8080/Users -d '{"name": "Kalyan", "email":"Kalyan@gmail.com"}' -H "Content-Type: application/json"
+## User:  Kalyan Saved Sucessfully
+curl -X POST http://localhost:8080/Users -d '{"name": "Chintalapati", "email":"Chintalapati@gmail.com"}' -H "Content-Type: application/json"
+## User: Chintalapati Saved Sucessfully 
 ```
 
-#### list all users:
+#### List all users(Query-1):
  
 Request: 
 ```
-curl http://localhost:8080/users/all
- 
+curl http://localhost:8080/Users/all 
 ```
-
 Response:
 ```json
 [
   {
     "id": 1,
-    "name": "User1",
-    "email": "kv1@gmail.com"
+    "name": "Kalyan",
+    "email": "Kalyan@gmail.com"
   },
   {
     "id": 2,
-    "name": "User1",
-    "email": "kv1@gmail.com"
+    "name": "Chintalapati",
+    "email": "Chintalapati@gmail.com"
   }
 ]
 ```
 
-#### Find user:
+#### Get a particular User(Query-2):
  
 Request: 
 ```
-curl http://localhost:8080/users?id=1 
+curl http://localhost:8080/Users?id=1
 ```
-
 Response:
 ```json
 {
   "id": 1,
-  "name": "User1",
-  "email": "kv1@gmail.com"
+  "name": "Kalyan",
+  "email": "Kalyan@gmail.com"
 }
 ```
 
@@ -147,12 +142,12 @@ Response:
 
 Request:
 ```
-curl -X DELETE "http://localhost:8080/users?id=1"
+curl -X DELETE "http://localhost:8080/Users?id=1
 ```
 
 Response:
 ```
-Deleted Successfully
+User-Id 1 Deleted Successfully
 ```
 
 
