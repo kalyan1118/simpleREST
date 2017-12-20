@@ -1,15 +1,38 @@
-### REST APIs
-
+## About Application
+This is a simple SpringBoot application with multiple REST endpoints.
 
 #### Start Application
-`./gradlew bootRun`
+Change the working the directory to the the projects folder.
+Enter the Command :`./gradlew bootRun`
 
+### Question 1
+Simple "Hello World" REST End point
 
-## Endpoints
+Request#1:
+```
+curl localhost:8080\greeting
+```
+
+Response:
+```json
+{ "id":1,
+  "content":"Hello, World!"
+}
+```
+
+Request#2:
+```
+curl localhost:8080\greeting?name=Kalyan
+```
+
+Response:
+```json
+{ "id":1,
+  "content":"Hello, Kalyan!"
+}
+```
 
 ### Question 2:
-
-####Find the word counts of the text passed in
 
 Request:
 ```
