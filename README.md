@@ -157,12 +157,13 @@ Deleted Successfully
 
 
 ### Question 6:
+REST endpoint that queries an external REST service using Spring RestTemplate. The response should be returned to the caller. 
+External Service which is Used to get Information : https://jsonplaceholder.typicode.com/posts
 
-Write a REST Client that calls an external service
-
+ 
 Request:
 ```
-curl http://localhost:8080/posts
+curl  http://localhost:8080/books
 ```
 
 Response:
