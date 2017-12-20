@@ -93,11 +93,22 @@ Add three REST endpoints that add, query, and delete rows in a database.
 HyperSQL(hsqldb.org) is Used and database dependency is added.
 
 #### Create Entry(Add): 
-Request
+Request:
 ```
-curl -X POST http://localhost:8080/Users -d '{"name": "Kalyan", "email":"Kalyan@gmail.com"}' -H "Content-Type: application/json"
+curl -X POST http://localhost:8080/Users -d '{"name": "Kalyan", "email":"Kalyan@gmail.com"}' 
+-H "Content-Type: application/json"
+```
+Response:
+```
 ## User:  Kalyan Saved Sucessfully
-curl -X POST http://localhost:8080/Users -d '{"name": "Chintalapati", "email":"Chintalapati@gmail.com"}' -H "Content-Type: application/json"
+```
+
+Request:
+```
+curl -X POST http://localhost:8080/Users -d '{"name": "Chintalapati", "email":"Chintalapati@gmail.com"}'
+-H "Content-Type: application/json"
+```
+Response:
 ## User: Chintalapati Saved Sucessfully 
 ```
 
